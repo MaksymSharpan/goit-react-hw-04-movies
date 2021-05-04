@@ -1,0 +1,25 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 20px 20px 20px 20px;
+
+  background: #e8e8e8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.01);
+
+  li {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.596);
+      &:hover,
+      &:focus {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+      }
+    }
+  }
+}
