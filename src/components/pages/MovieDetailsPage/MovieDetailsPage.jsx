@@ -1,6 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { getOneFilm } from '../../service/movie-service';
+
+import style from './MovieDetailsPage.module.scss';
 
 class MovieDetailsPage extends React.Component {
   state = {
@@ -55,11 +58,19 @@ class MovieDetailsPage extends React.Component {
     const { film } = this.state;
 
     return (
-      <div>
-        <h2>{film.title}</h2>
-        <img src={film.poster} alt="" />
-        <p>{film.body}</p>
-      </div>
+      <>
+        <div>
+          <h2>{film.title}</h2>
+          <img src={film.poster} alt="" />
+          <p>{film.body}</p>
+        </div>
+        <NavLink className={style.link} to={`/movies/${film.id}/cast`}>
+          Cast
+        </NavLink>
+        <NavLink className={style.link} to={`/movies/${film.id}/reviews`}>
+          Reviews
+        </NavLink>
+      </>
     );
   }
 }
