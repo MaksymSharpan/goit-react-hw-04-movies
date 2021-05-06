@@ -1,0 +1,13 @@
+// .content {
+//   display: flex;
+// }
+
+.container {
+  padding: 30px;
+}
+
+.link {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}

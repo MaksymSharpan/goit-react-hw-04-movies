@@ -1,0 +1,11 @@
+.castList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.castItem {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

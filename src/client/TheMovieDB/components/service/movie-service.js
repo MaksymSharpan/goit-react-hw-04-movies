@@ -1,4 +1,4 @@
-import instance from '../../shared/services/basic-http-service';
+import instance from '../../../../shared/services/basic-http-service';
 
 const KEY = '923c2cf88ec4338da74c768a045101f0';
 
