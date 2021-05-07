@@ -3,7 +3,7 @@ import { NavLink, Route } from 'react-router-dom';
 
 import { getOneFilm } from '../../components/service/movie-service';
 
-import style from './MovieDetailsPage.module.scss';
+import styles from './MovieDetailsPage.module.scss';
 
 import Cast from '../../pages/Cast';
 import Reviews from '../../pages/Reviews';
@@ -69,15 +69,16 @@ class MovieDetailsPage extends React.Component {
 
     return (
       <>
-        <div className={style.container}>
+        <div className={styles.movieContainer}>
           <SingleMoviePage film={film} />
-
-          <NavLink className={style.link} to={`/movies/${movieId}/cast`}>
-            Cast
-          </NavLink>
-          <NavLink className={style.link} to={`/movies/${movieId}/reviews`}>
-            Reviews
-          </NavLink>
+          <div className={styles.linkContainer}>
+            <NavLink className={styles.link} to={`/movies/${movieId}/cast`}>
+              Cast
+            </NavLink>
+            <NavLink className={styles.link} to={`/movies/${movieId}/reviews`}>
+              Reviews
+            </NavLink>
+          </div>
         </div>
 
         <Route

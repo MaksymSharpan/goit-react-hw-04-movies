@@ -1,1 +1,39 @@
+.button {
+  position: relative;
+  text-align: center;
+  width: 120px;
+  height: 30px;
 
+  text-decoration: none;
+  font-family: 'Roboto Condensed', Тahoma, sans-serif;
+  color: rgba(0, 0, 0, 0.596);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgba(2, 7, 3, 0.719);
+  }
+  &:after,
+  &:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.596);
+    bottom: -6px;
+    content: '';
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+  &:before {
+    top: -6px;
+  }
+  &:hover:after,
+  &:hover:before,
+  &:active:after,
+  &:active:before,
+  &:focus:after,
+  &:focus:before {
+    width: 100%;
+    left: 0;
+  }
+}

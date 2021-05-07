@@ -1,12 +1,8 @@
 .filmList {
-  padding: 0;
-  list-style: none;
+  padding: 20px;
+
   display: flex;
   flex-wrap: wrap;
-  align-content: stretch;
   justify-content: space-around;
-  align-items: flex-start;
   flex-direction: row;
-  // flex-basis: 160px;
-  // height: 80px;
 }

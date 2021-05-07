@@ -1,7 +1,11 @@
 .castList {
-  list-style: none;
+  padding-left: 30px;
+  padding-right: 30px;
+
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
 }
 
 .castItem {

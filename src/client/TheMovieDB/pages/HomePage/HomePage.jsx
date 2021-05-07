@@ -4,7 +4,7 @@ import AllMovieList from '../components/AllMovies/AllMoviesList';
 
 import { getTrendingMovies } from '../../components/service/movie-service';
 
-// import styles from './HomePage.module.scss';
+import styles from './HomePage.module.scss';
 
 class HomePage extends React.Component {
   state = {
@@ -48,7 +48,11 @@ class HomePage extends React.Component {
   }
   render() {
     const { films } = this.state;
-    return <AllMovieList films={films} />;
+    return (
+      <div className={styles.background}>
+        <AllMovieList films={films} />
+      </div>
+    );
   }
 }
 

@@ -1,7 +1,13 @@
 .filmsItem {
   margin-bottom: 10px;
   width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.596);
+  // border: 1px solid rgba(0, 0, 0, 0.596);
+  border: 8px solid transparent;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 8px rgba(14, 12, 12, 0.63);
+  }
 
   img {
     width: 300px;
@@ -11,4 +17,14 @@
   h2 {
     font-size: 17px;
   }
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+
+  // &:hover,
+  // &:focus {
+  //   border-bottom: 1px solid rgba(0, 0, 0, 0.596);
+  // }
 }

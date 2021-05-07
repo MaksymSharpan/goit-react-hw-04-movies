@@ -1,27 +1,50 @@
-.filmList {
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
-  // flex-basis: 160px;
-  // height: 80px;
+// .background {
+//   background-image: url('../../../../images/background.jpeg');
+// }
+.form {
+  text-align: center;
+  margin: 10px;
+}
+.input {
+  width: 300px;
+  padding: 10px;
+  margin-right: 10px;
 }
 
-.filmsItem {
-  margin-bottom: 10px;
-  width: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.596);
+.button {
+  position: relative;
+  width: 100px;
+  height: 39px;
+  text-decoration: none;
+  font-family: 'Roboto Condensed', Тahoma, sans-serif;
+  color: rgba(0, 0, 0, 0.596);
 
-  img {
-    width: 300px;
-    max-width: 100%;
-    height: auto;
+  &:hover,
+  &:active,
+  &:focus {
+    color: rgba(2, 7, 3, 0.719);
   }
-  h2 {
-    font-size: 17px;
+  &:after,
+  &:before {
+    position: absolute;
+    height: 4px;
+    left: 50%;
+    background: rgba(0, 0, 0, 0.596);
+    bottom: -6px;
+    content: '';
+    transition: all 280ms ease-in-out;
+    width: 0;
+  }
+  &:before {
+    top: -6px;
+  }
+  &:hover:after,
+  &:hover:before,
+  &:active:after,
+  &:active:before,
+  &:focus:after,
+  &:focus:before {
+    width: 100%;
+    left: 0;
   }
 }

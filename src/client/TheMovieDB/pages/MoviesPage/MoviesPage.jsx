@@ -2,7 +2,7 @@ import React from 'react';
 // import { NavLink } from 'react-router-dom';
 
 import { getFilmBySearch } from '../../components/service/movie-service';
-// import styles from './MoviesPage.module.scss';
+import styles from './MoviesPage.module.scss';
 
 import AllMoviesList from '../components/AllMovies/AllMoviesList';
 
@@ -46,14 +46,22 @@ class MoviesPage extends React.Component {
     const { query, films } = this.state;
 
     return (
-      <>
-        <form onSubmit={handleSubmit}>
-          <input type="text" value={query} onChange={handleChange} />
-          <button type="submit">Search</button>
+      <div className={styles.background}>
+        <form onSubmit={handleSubmit} className={styles.form}>
+          <input
+            className={styles.input}
+            type="text"
+            value={query}
+            onChange={handleChange}
+            placeholder="Search movie"
+          />
+          <button className={styles.button} type="submit">
+            Search
+          </button>
         </form>
 
         <AllMoviesList films={films} />
-      </>
+      </div>
     );
   }
 }

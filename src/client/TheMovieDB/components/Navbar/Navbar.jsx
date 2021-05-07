@@ -5,17 +5,21 @@ import styles from './Navbar.module.scss';
 
 function Navbar() {
   return (
-    <ul className={styles.navbar}>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/movies">Search movies</NavLink>
-      </li>
-      {/* <li>
-        <NavLink to="/movies/:movieId"></NavLink>
-      </li> */}
-    </ul>
+    <>
+      <ul className={styles.navbar}>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/movies">Search movies</NavLink>
+        </li>
+      </ul>
+      {/* <img
+        src="../../../../images/cloneold.ico"
+        alt=""
+        className={styles.img}
+      /> */}
+    </>
   );
 }
 

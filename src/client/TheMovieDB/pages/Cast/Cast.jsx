@@ -27,7 +27,7 @@ class Cast extends React.Component {
     const { cast } = this.state;
     // console.log(cast);
 
-    const castItem = cast.map(item => {
+    const castElem = cast.map(item => {
       const newProfilePath =
         item.profile_path !== null
           ? `https://image.tmdb.org/t/p/w500/${item.profile_path}`
@@ -45,7 +45,7 @@ class Cast extends React.Component {
       );
     });
 
-    return <ul className={styles.castList}>{castItem}</ul>;
+    return <ul className={styles.castList}>{castElem}</ul>;
   }
 }
 

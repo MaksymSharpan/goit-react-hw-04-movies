@@ -14,9 +14,12 @@ function SingleMoviePage({ film }) {
   });
   return (
     <>
-      <ButtonGo />
+      <div className={styles.buttonContainer}>
+        <ButtonGo />
+      </div>
+
       <div className={styles.content}>
-        <img src={newPosterPath} alt={film.title} />
+        <img className={styles.img} src={newPosterPath} alt={film.title} />
         <div className={styles.body}>
           <h2>{film.title}</h2>
           <p>Rating: {film.userScore}</p>
