@@ -25,7 +25,7 @@ class Reviews extends React.Component {
   }
   render() {
     const { reviews } = this.state;
-    console.log(this.state.reviews);
+    // console.log(this.state.reviews);
 
     const reviewElem = reviews.map(item => {
       return (

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './SingleMoviePage.module.scss';
 
-import ButtonGo from '../../../../shared/ButtonGo';
+// import ButtonGo from '../../../../shared/ButtonGo';
 
 function SingleMoviePage({ film }) {
   const newPosterPath = film.poster
@@ -14,17 +14,22 @@ function SingleMoviePage({ film }) {
   });
   return (
     <>
-      <div className={styles.buttonContainer}>
+      {/* <div className={styles.buttonContainer}>
         <ButtonGo />
-      </div>
+      </div> */}
 
       <div className={styles.content}>
         <img className={styles.img} src={newPosterPath} alt={film.title} />
         <div className={styles.body}>
-          <h2>{film.title}</h2>
-          <p>Rating: {film.userScore}</p>
+          <h2 className={styles.filmTitle}>{film.title}</h2>
+          <p>
+            <span className={styles.movieInfoSpan}>Rating: </span>{' '}
+            {film.userScore}
+          </p>
           <p>{film.overview}</p>
-          <ul>Genres: {genres}</ul>
+          <ol className={styles.overviewList}>
+            <span className={styles.movieInfoSpan}>Genres: </span> {genres}
+          </ol>
         </div>
       </div>
     </>

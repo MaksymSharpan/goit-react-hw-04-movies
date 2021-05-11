@@ -1,11 +1,23 @@
-.buttonContainer {
-  margin-bottom: 30px;
-  text-align: center;
-}
+// .buttonContainer {
+//   margin-bottom: 30px;
+//   text-align: center;
+// }
 .img {
   width: 350px;
   margin-right: 30px;
 }
 .content {
   display: flex;
+}
+.filmTitle {
+  margin-bottom: 20px;
+}
+
+.overviewList {
+  margin: 0;
+  padding: 20px;
+}
+.movieInfoSpan {
+  text-transform: uppercase;
+  font-weight: bold;
 }

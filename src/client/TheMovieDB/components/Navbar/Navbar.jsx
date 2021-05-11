@@ -3,15 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './Navbar.module.scss';
 
+import routes from '../../../../routes';
+
 function Navbar() {
   return (
-    <>
+    <header>
       <ul className={styles.navbar}>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to={routes.home}>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/movies">Search movies</NavLink>
+          <NavLink to={routes.movies}>Search movies</NavLink>
         </li>
       </ul>
       {/* <img
@@ -19,7 +21,7 @@ function Navbar() {
         alt=""
         className={styles.img}
       /> */}
-    </>
+    </header>
   );
 }
 

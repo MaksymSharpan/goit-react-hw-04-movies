@@ -8,6 +8,9 @@ import styles from './MovieDetailsPage.module.scss';
 import Cast from '../../pages/Cast';
 import Reviews from '../../pages/Reviews';
 import SingleMoviePage from '../SingleMoviePage/SingleMoviePage';
+import ButtonGo from '../../../../shared/ButtonGo';
+
+import routes from '../../../../routes';
 
 class MovieDetailsPage extends React.Component {
   state = {
@@ -69,6 +72,9 @@ class MovieDetailsPage extends React.Component {
 
     return (
       <>
+        <div className={styles.buttonContainer}>
+          <ButtonGo props={this.props.history} />
+        </div>
         <div className={styles.movieContainer}>
           <SingleMoviePage film={film} />
           <div className={styles.linkContainer}>
@@ -81,14 +87,8 @@ class MovieDetailsPage extends React.Component {
           </div>
         </div>
 
-        <Route
-          path="/movies/:movieId/cast"
-          render={props => <Cast {...props} />}
-        />
-        <Route
-          path="/movies/:movieId/reviews"
-          render={props => <Reviews {...props} />}
-        />
+        <Route path={routes.cast} render={props => <Cast {...props} />} />
+        <Route path={routes.reviews} render={props => <Reviews {...props} />} />
       </>
     );
   }
